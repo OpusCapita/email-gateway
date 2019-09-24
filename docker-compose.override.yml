@@ -1,0 +1,9 @@
+version: '3'
+services:
+  main:
+    build: .
+    volumes:
+      - ./src:/home/node/email-gateway/src
+      - ./config:/home/node/email-gateway/config
+      - ./wiki:/home/node/email-gateway/wiki
+    command: 'npm run dev'
