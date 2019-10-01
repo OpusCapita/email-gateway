@@ -20,8 +20,9 @@
   "dependencies": {
     "@opuscapita/config": "^3.0.16",
     "@opuscapita/db-init": "^2.0.24",
-    "@opuscapita/web-init": "^3.0.87",
-    "@opuscapita/logger": "^1.0.11"
+    "@opuscapita/kafka-client": "^1.0.10",
+    "@opuscapita/logger": "^1.0.11",
+    "@opuscapita/web-init": "^3.0.87"
   },
   "devDependencies": {
     "@opuscapita/service-base-ui": "^2.0.0",
