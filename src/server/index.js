@@ -19,6 +19,8 @@ async function init(config) {
 
     const eventClient = new KafkaClient();
     await eventClient.init();
+
+    // TODO: Figure out a way to create a start topic from a script instead.
     await eventClient.createTopic('emailgateway.inbound.tx', 10000);
 
     // TODO: Remove this once you have real permissions using ACL.
