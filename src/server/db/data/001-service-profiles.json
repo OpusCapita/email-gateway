@@ -1,0 +1,31 @@
+[
+    {
+        "name": "Invoice sending",
+        "clientId": "hardware",
+        "docType": "invoice",
+        "direction": "sending",
+        "createdBy": "The programmer"
+    },
+    {
+        "name": "Invoice receiving",
+        "clientId": "hardware",
+        "docType": "invoice",
+        "direction": "receiving",
+        "createdBy": "The programmer"
+    },
+    {
+        "name": "Order receiving",
+        "clientId": "hardware",
+        "docType": "order",
+        "direction": "receiving",
+        "createdBy": "The programmer"
+    },
+    {
+        "name": "Invoice sending - Hardware AG",
+        "clientId": "hardware",
+        "businessPartnerId": "hard001",
+        "docType": "invoice",
+        "direction": "sending",
+        "createdBy": "The programmer"
+    }
+]

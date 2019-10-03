@@ -1,5 +1,7 @@
 const Sequelize = require('sequelize');
 
+const ServiceProfile = require('./ServiceProfile');
+
 /**
  * Initializes all required database models using Sequelize.
  *
@@ -8,11 +10,7 @@ const Sequelize = require('sequelize');
  * @returns {Promise} JavaScript Promise object.
  * @see [Creating database models]{@link https://github.com/OpusCapita/db-init#creating-database-models}
  */
-module.exports.init = async function(db, config)
-{
-    // Register Sequelize database models here.
-    // Use require in order to separate models into multiple js files.
-    // http://docs.sequelizejs.com/en/latest/api/model/
-    //
-    // db.define(...);
-}
+module.exports.init = async function(db, config) {
+    ServiceProfile.init(db, config);
+    return Promise.resolve();
+};
