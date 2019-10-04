@@ -17,12 +17,6 @@ if (!isDevMode) logger.redirectConsoleOut(); // Force anyone using console.* out
 async function init(config) {
     const db = await dbInit.init(config && config.db);
 
-    const eventClient = new KafkaClient();
-    await eventClient.init();
-
-    // TODO: Figure out a way to create a start topic from a script instead.
-    await eventClient.createTopic('emailgateway.inbound.tx', 10000);
-
     // TODO: Remove this once you have real permissions using ACL.
     if (isDevMode) {
         const retry = require('bluebird-retry'); // Only for development
