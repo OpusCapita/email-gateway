@@ -1,6 +1,6 @@
 'use strict';
 
-const ServiceProfile = require('../api/serviceProfile');
+const ServiceProfile = require('../api/ServiceProfile');
 
 /*
 const ServiceClient = require('ocbesbn-service-client');

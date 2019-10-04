@@ -2,7 +2,7 @@
 
 const KafkaClient = require('@opuscapita/kafka-client');
 
-const TxContext = require('./TransactionContext');
+const TxContext = require('./transactionContext');
 
 // TODO - Update consumer/producer topic names
 // TODO - Move topic configs to toplevel config

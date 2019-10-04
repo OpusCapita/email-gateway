@@ -1,4 +1,4 @@
-const SequelizeUtils = require('./sequelizeUtils');
+const SequelizeUtils = require('./SequelizeUtils');
 
 // TODO - Validate that all functionality here is needed
 class ServiceProfile extends SequelizeUtils {
