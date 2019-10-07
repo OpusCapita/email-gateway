@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 
+// TODO - Modify this file to only hold the columns necessary for Email-GW
 module.exports.up = async function(db, config)
 {
     return db.queryInterface.createTable('ServiceProfile', {

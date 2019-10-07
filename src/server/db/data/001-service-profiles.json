@@ -4,21 +4,24 @@
         "clientId": "hardware",
         "docType": "invoice",
         "direction": "sending",
-        "createdBy": "The programmer"
+        "createdBy": "The programmer",
+        "productProfileId": "1"
     },
     {
         "name": "Invoice receiving",
         "clientId": "hardware",
         "docType": "invoice",
         "direction": "receiving",
-        "createdBy": "The programmer"
+        "createdBy": "The programmer",
+        "productProfileId": "2"
     },
     {
         "name": "Order receiving",
         "clientId": "hardware",
         "docType": "order",
         "direction": "receiving",
-        "createdBy": "The programmer"
+        "createdBy": "The programmer",
+        "productProfileId": "3"
     },
     {
         "name": "Invoice sending - Hardware AG",
@@ -26,6 +29,7 @@
         "businessPartnerId": "hard001",
         "docType": "invoice",
         "direction": "sending",
-        "createdBy": "The programmer"
+        "createdBy": "The programmer",
+        "productProfileId": "4"
     }
 ]
