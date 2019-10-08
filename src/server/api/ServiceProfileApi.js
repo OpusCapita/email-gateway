@@ -1,7 +1,6 @@
-const SequelizeUtils = require('./SequelizeUtils');
+const SequelizeUtils = require('../util/SequelizeUtils');
 
-// TODO - Validate that all functionality here is needed
-class ServiceProfile extends SequelizeUtils {
+class ServiceProfileApi extends SequelizeUtils {
     constructor(db) {
         super();
 
@@ -55,10 +54,14 @@ class ServiceProfile extends SequelizeUtils {
     fromDb(res) {
         if (res) {
             res = res.get();
+            /*
+            // TODO - Fix
             res.allowedInboundChannels = JSON.parse(res.allowedInboundChannels);
             res.routingPreferencePriorityList = JSON.parse(
                 res.routingPreferencePriorityList
             );
+            */
+
             return res;
         } else {
             return null;
@@ -66,4 +69,4 @@ class ServiceProfile extends SequelizeUtils {
     }
 }
 
-module.exports = ServiceProfile;
+module.exports = ServiceProfileApi;

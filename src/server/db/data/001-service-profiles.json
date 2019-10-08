@@ -1,35 +1,22 @@
 [
     {
-        "name": "Invoice sending",
-        "clientId": "hardware",
-        "docType": "invoice",
-        "direction": "sending",
-        "createdBy": "The programmer",
-        "productProfileId": "1"
+        "name": "Profile 1",
+        "description": "A description",
+        "createdBy": "The programmer"
     },
     {
-        "name": "Invoice receiving",
-        "clientId": "hardware",
-        "docType": "invoice",
-        "direction": "receiving",
-        "createdBy": "The programmer",
-        "productProfileId": "2"
+        "name": "Profile 2",
+        "description": "Another description",
+        "createdBy": "The programmer"
     },
     {
-        "name": "Order receiving",
-        "clientId": "hardware",
-        "docType": "order",
-        "direction": "receiving",
-        "createdBy": "The programmer",
-        "productProfileId": "3"
+        "name": "Profile 3",
+        "description": "A third description",
+        "createdBy": "The programmer"
     },
     {
-        "name": "Invoice sending - Hardware AG",
-        "clientId": "hardware",
-        "businessPartnerId": "hard001",
-        "docType": "invoice",
-        "direction": "sending",
-        "createdBy": "The programmer",
-        "productProfileId": "4"
+        "name": "Profile 4",
+        "description": "A fourth description",
+        "createdBy": "The programmer"
     }
 ]
