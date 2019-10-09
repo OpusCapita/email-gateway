@@ -6,7 +6,13 @@ class DevApi {
         await eventClient.init();
         return await eventClient.publish(
             'emailgateway.inbound.tx',
-            'Test event from DevApi'
+            {
+                test: 'test-toplevel-data',
+                eventOrigin: { systemNode: 'test-system-node' },
+                origin: { flowId: 'test-origin-flowid' }
+            },
+            null,
+            { partitionKey: '1' }
         );
     }
 }

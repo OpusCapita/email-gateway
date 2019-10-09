@@ -60,9 +60,18 @@ const States = {
 };
 
 module.exports.processIncomingEmail = async function(data) {
-    const { tx, context, topic, logger, eventClient, db, emitTopic } = data;
+    const {
+        payload,
+        context,
+        topic,
+        logger,
+        eventClient,
+        db,
+        emitTopic
+    } = data;
+    let tx = payload;
     logger.info(
-        'processIncomingEmail - payload, context, topic, target: ',
+        'processIncomingEmail - tx, context, topic, target: ',
         tx,
         context,
         topic
@@ -73,7 +82,7 @@ module.exports.processIncomingEmail = async function(data) {
         tx,
         States.DONE,
         'Processing completed',
-        'Incoming TX enriched successfully'
+        'Incoming tx enriched successfully'
     );
 
     logger.info(
@@ -82,7 +91,7 @@ module.exports.processIncomingEmail = async function(data) {
         tx,
         context
     );
-    await eventClient.publish(emitTopic, enrichedTx, context);
+    await eventClient.publish(emitTopic, tx, context);
 };
 
 const enrichWithServiceProfile = async function(tx) {
