@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 
-const ServiceProfile = require('./ServiceProfile');
+const ServiceProfile = require('./serviceProfile');
 
 /**
  * Initializes all required database models using Sequelize.
