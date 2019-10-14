@@ -7,3 +7,8 @@ services:
       - ./config:/home/node/email-gateway/config
       - ./wiki:/home/node/email-gateway/wiki
     command: 'npm run dev'
+
+
+  kafka1:
+    environment:
+      KAFKA_CREATE_TOPICS: "emailgateway.inbound.tx:1:1,emailgateway.outbound.tx:1:1"

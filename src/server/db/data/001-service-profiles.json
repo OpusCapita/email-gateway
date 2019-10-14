@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Profile 1",
+        "description": "A description",
+        "createdBy": "The programmer"
+    },
+    {
+        "name": "Profile 2",
+        "description": "Another description",
+        "createdBy": "The programmer"
+    },
+    {
+        "name": "Profile 3",
+        "description": "A third description",
+        "createdBy": "The programmer"
+    },
+    {
+        "name": "Profile 4",
+        "description": "A fourth description",
+        "createdBy": "The programmer"
+    }
+]
