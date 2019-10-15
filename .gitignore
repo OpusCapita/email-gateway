@@ -5,4 +5,4 @@ test-results.xml
 coverage
 *.bak
 *.todo
-
+bundle.js

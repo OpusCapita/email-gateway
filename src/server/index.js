@@ -35,7 +35,14 @@ async function init(config) {
             enableEventClient: true,
             events: {
                 onStart: () => logger.info('Server ready. Allons-y!')
-            }
+            },
+            indexFilePath : process.cwd() + '/src/server/static/index.html',
+            staticFilePath : process.cwd() + '/src/server/static/',
+            indexFileRoutes : [ '/' ],
+            webpack : {
+                useWebpack : isDevMode,
+                configFilePath : process.cwd() + '/webpack.development.config.js'
+            },
         },
         routes: {
             dbInstance: db

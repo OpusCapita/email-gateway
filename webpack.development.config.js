@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-	entry: ['babel-polyfill', './local/index-page.js'],
+	entry: ['babel-polyfill', path.resolve(__dirname, './src/client/index.js')],
 	output: {
 		path: path.resolve(__dirname, './src/server/static'),
 		publicPath: '/static',
@@ -16,6 +16,10 @@ module.exports = {
 	},
 
 	devtool: 'eval-source-map',
+	watch: true,
+	watchOptions: {
+		ignored: ['node_modules']
+	},
 
 	plugins: [
 		new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en|de/),
