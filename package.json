@@ -54,7 +54,8 @@
   },
   "scripts": {
     "start": "node src/server/index.js",
-    "dev": "npm run setup ; npx nodemon --watch src/server src/server/index.js",
+    "devOld": "npm run setup ; npx nodemon --watch src/server src/server/index.js",
+    "dev": "npm run setup ; npx nodemon --watch src/server --ignore src/server/static src/server/index.js & ./node_modules/.bin/webpack --config webpack.development.config.js --watch",
     "dev:production": "npm run setup ; NODE_ENV=production npm start",
     "local": "npm run setup ; npx nodemon --watch src/server local/index.js",
     "perf": "npm run clean ; npm run setup ; node --perf-basic-prof src/server/index.js",

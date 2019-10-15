@@ -1,0 +1,34 @@
+{
+    "ServiceProfileOverview.createNewServceProfile": "Create new service profile",
+    "ServiceProfileOverview.header": "Service Profile Overview",
+    "ServiceProfileOverview.id": "ID",
+    "ServiceProfileOverview.client": "Client",
+    "ServiceProfileOverview.businessPartner": "Business partner",
+
+    "ServiceProfileOverview.direction": "Direction",
+    "ServiceProfileOverview.direction.sending": "Sending",
+    "ServiceProfileOverview.direction.receiving": "Receiving",
+
+    "ServiceProfileOverview.docType.label": "Document type",
+    "ServiceProfileOverview.docType.invoice": "Invoice",
+    "ServiceProfileOverview.docType.order": "Order",
+    "ServiceProfileOverview.docType.orderResponse": "Order response",
+    "ServiceProfileOverview.docType.despatchAdvice": "Despatch advice",
+    
+    "ServiceProfileOverview.loading": "Loading...",
+    "ServiceProfileOverview.nodata": "No routes",
+
+    "ServiceProfileOverview.notification.serviceProfilesNotFound": "Service profiles not found",
+    "ServiceProfileOverview.notification.failedDeletingServiceOrder": "Failed to delete service order",
+
+    "ServiceProfileOverview.pagination.previous": "Previous",
+    "ServiceProfileOverview.pagination.next": "Next",
+    "ServiceProfileOverview.pagination.page": "Page",
+    "ServiceProfileOverview.pagination.of": "of",
+    "ServiceProfileOverview.pagination.rows": "rows",
+
+    "ServiceProfileOverview.actions.open": "Open",
+    "ServiceProfileOverview.actions.delete": "Delete",
+    "ServiceProfileOverview.search": "Search",
+    "ServiceProfileOverview.reset": "Reset"
+}

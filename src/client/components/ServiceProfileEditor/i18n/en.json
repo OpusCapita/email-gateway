@@ -1,0 +1,53 @@
+{
+    "ServiceProfileForm.header": "Service Profile",
+    "ServiceProfileEditor.direction": "Direction",
+    "ServiceProfileEditor.sending": "Sending",
+    "ServiceProfileEditor.receiving": "Receiving",
+    "ServiceProfileEditor.goToOverview": "Go to overview",
+
+    "ServiceProfileEditor.docType.label": "Document type",
+    "ServiceProfileEditor.docType.*": "any",
+    "ServiceProfileEditor.docType.order": "Order",
+    "ServiceProfileEditor.docType.invoice": "Invoice",
+    "ServiceProfileEditor.docType.orderResponse": "Order response",
+    "ServiceProfileEditor.docType.despatchAdvice": "Despatch advice",
+
+    "ServiceProfileEditor.allowedInboundChannels.interoperabilityPartners": "Interoperability partners",
+    "ServiceProfileEditor.allowedInboundChannels.chargeableInteroperabilityPartners": "Chargeable interoperability partners",
+    "ServiceProfileEditor.allowedInboundChannels.PEPPOL": "PEPPOL",
+    "ServiceProfileEditor.allowedInboundChannels.finnishB2BBankConnections": "Finnish b2b bank connections",
+    "ServiceProfileEditor.allowedInboundChannels.ediVanInteroperabilityPartners": "Edi/van interoperability partners",
+
+    "ServiceProfileEditor.productProfile.label": "Product profile",
+    "ServiceProfileEditor.inboundBusinessChannelId.label": "Business Channel",
+    "ServiceProfileEditor.commercialOffering.invoiceSending": "Invoice sending",
+    "ServiceProfileEditor.commercialOffering.invoiceReceiving": "Invoice receiving",
+    "ServiceProfileEditor.commercialOffering.order2Cash": "Order to cash",
+    "ServiceProfileEditor.commercialOffering.purchase2Pay": "Purchase to pay",
+
+    "ServiceProfileEditor.gateway.header": "Gateways",
+    "ServiceProfileEditor.gatewayType.legacySftpGateway": "Legacy SFTP Gateway",
+    "ServiceProfileEditor.gatewayType.sftpGateway": "SFTP Gateway",
+    "ServiceProfileEditor.legacySftpGateway.info": "The <em>Legacy SFTP Gateway</em> won't get configured in this ui. \n Instead you have to establish a linkage between the SFTP configuration and this Service Profile by manually adding the ServiceProfileId in the SFTP configuration in webMethods. \n In case you have to use this SFTP gateway and don't know what to do, please ask our support team for help.",
+    "ServiceProfileEditor.gatewayReference.label": "Select your gateways",
+    "ServiceProfileEditor.gatewayReference.noComponent": "This gateway type is not supported up to now. Please selecte a different one.",
+
+    "ServiceProfileEditor.routing.header": "Routing",
+    "ServiceProfileEditor.routingPreferencePriorityList.label": "Routing preference priority list",
+    "ServiceProfileEditor.routingPreferencesDeactivated.label": "Routing preferences deactivated",
+
+    "ServiceProfileEditor.receptionChannel.header": "Reception Channel Configuration",
+    "ServiceProfileEditor.receptionChannel.label": "Reception channel",
+
+    "ServiceProfileEditor.allowedInboundChannels.label": "Allowed inbound channels",
+
+    "ServiceProfileEditor.notification.serviceProfileNotFound": "Service profile not found",
+    "ServiceProfileEditor.notification.failedLoadingProductProfiles": "Failed to load product profiles",
+    "ServiceProfileEditor.notification.failedLoadingProductProfile": "Failed to load product profile",
+    "ServiceProfileEditor.notification.successfullySaved": "Successfully saved service profile",
+    "ServiceProfileEditor.notification.failedToSave": "Failed to save service profile",
+    "ServiceProfileEditor.notification.failedToSaveGatewayReference": "Failed to save gateway reference",
+    "ServiceProfileEditor.notification.failedToReceptionChannelConfigs": "Failed to load reception channel configs",
+    "ServiceProfileEditor.notification.failedToLoadBusinessChannelGroups": "Failed to load business channel groups",
+    "ServiceProfileEditor.notification.failedToLoadGatewayReferences": "Failed to load gateway references"
+}
