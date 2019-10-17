@@ -38,7 +38,7 @@ async function init(config) {
             },
             indexFilePath : process.cwd() + '/src/server/static/index.html',
             staticFilePath : process.cwd() + '/src/server/static/',
-            indexFileRoutes : [ '/' , '/test' ],
+            indexFileRoutes : [ '/' , '/ServiceProfileOverview' ],
             webpack : {
                 useWebpack : isDevMode,
                 configFilePath : process.cwd() + '/webpack.development.config.js'

@@ -1,0 +1,36 @@
+{
+    "System.yes": "Yes",
+    "System.no": "No",
+    "System.save": "Save",
+    "System.required": "Required",
+    "System.areYouSure": "Are you sure?",
+
+    "Common.open": "Open",
+    "Common.delete": "Delete",
+    "Common.search": "Search",
+    "Common.reset": "Reset",
+    "Common.goToOverview": "Go to overview",
+
+    "Common.loading": "Loading...",
+    "Common.nodata": "No result",
+
+    "Common.pagination.previous": "Previous",
+    "Common.pagination.next": "Next",
+    "Common.pagination.page": "Page",
+    "Common.pagination.of": "of",
+    "Common.pagination.rows": "rows",
+    
+    "Common.client": "Client",
+    "Common.businessPartner": "Business partner",
+    "Common.name": "Name",
+    "Common.description": "Description",
+    "Common.status": "Status",
+    "Common.edit": "Edit",
+
+    "Common.createNew": "Create new...",
+    "Common.somethingWentWrong": "Something went wrong, please check the logs.",
+
+    "Common.direction.label": "Direction",
+    "Common.direction.inbound": "Inbound",
+    "Common.direction.outbound": "Outbound"
+}

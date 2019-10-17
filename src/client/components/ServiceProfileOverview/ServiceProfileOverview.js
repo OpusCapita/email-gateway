@@ -8,14 +8,14 @@ import translations from './i18n';
 class ServiceProfileOverview extends Components.ContextComponent {
     constructor(props, context) {
         super(props);
+        this.loadServiceProfiles = this.loadServiceProfiles.bind(this);
         const { i18n } = context;
-
         this.state = {
             serviceProfiles: [],
             params: {},
             loading: false,
         }
-
+        
         i18n.register('ServiceProfileOverview', translations);
     }
 
@@ -77,7 +77,7 @@ class ServiceProfileOverview extends Components.ContextComponent {
     render() {
         const { i18n, router } = this.context;
         const { serviceProfiles, params, loading } = this.state;
-
+        
         return (<div className='serviceProfileOverview'>
             <h1>
                 {i18n.getMessage('ServiceProfileOverview.header')}
@@ -87,9 +87,9 @@ class ServiceProfileOverview extends Components.ContextComponent {
                         className="btn btn-link"
                         onClick={(e) => {
                             e.preventDefault();
-                            router.push(`/routing/service-profile/edit`);
+                            router.push(`/email-gateway/service-profile/edit`);
                         }}
-                    >
+                        >
                         {i18n.getMessage('ServiceProfileOverview.createNewServceProfile')}
                     </button>
                 </div>
@@ -99,13 +99,13 @@ class ServiceProfileOverview extends Components.ContextComponent {
                 params={params}
                 onReset={this.onReset.bind(this)}
                 onSubmit={this.loadServiceProfiles.bind(this)}
-            />
+                />
             <br />
             <ServiceProfileList
                 serviceProfiles={serviceProfiles}
                 onHandleDelete={this.onHandleDelete.bind(this)}
                 loading={loading}
-            />
+                />
         </div>)
     }
 }

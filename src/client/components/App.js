@@ -3,17 +3,16 @@ import React from 'react';
 import { Route, Redirect } from 'react-router';
 import { Containers } from '@opuscapita/service-base-ui';
 
-import TestComponent from './TestComponent/TestComponent';
+import ServiceProfileOverview from './ServiceProfileOverview/ServiceProfileOverview';
 
 class App extends React.Component {
     render() {
-        console.log('App.js rendering');
         return (
             <div>
             <Containers.ServiceLayout serviceName="email-gateway">
-                <Route path="/test" component={TestComponent} />
+                <Route path="/ServiceProfileOverview" component={ServiceProfileOverview} />
 
-                <Redirect from="/" to="/test" />
+                <Redirect from="/" to="/ServiceProfileOverview" />
             </Containers.ServiceLayout>
             </div>
         )

@@ -2,10 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Components } from '@opuscapita/service-base-ui';
 
-import BusinessPartner from '../BusinessPartner';
-import Client from '../Client';
-import Select from '@opuscapita/react-select';
-
 import commonTranslations from '../i18n';
 
 class SearchForm extends Components.ConditionalRenderComponent {
@@ -44,7 +40,7 @@ class SearchForm extends Components.ConditionalRenderComponent {
     render() {
         const { i18n } = this.context;
         const { params } = this.props;
-
+        
         return (<div className='searchForm'>
             <form className='form-horizontal'>
                 <div className='row'>
@@ -60,59 +56,6 @@ class SearchForm extends Components.ConditionalRenderComponent {
                                 />
                             </div>
                         </div>
-
-                        <div className='form-group'>
-                            <label className='col-sm-4'>{i18n.getMessage('Common.client')}</label>
-                            <div className='col-sm-8'>
-                                <Client.Dropdown
-                                    id={params.clientId}
-                                    onChange={value => this.handleChange(value && value.id, 'clientId')}
-                                />
-                            </div>
-                        </div>
-
-                        <div className='form-group'>
-                            <label className='col-sm-4'>{i18n.getMessage('Common.businessPartner')}</label>
-                            <div className='col-sm-8'>
-                                <BusinessPartner.Dropdown
-                                    id={params.businessPartnerId}
-                                    onChange={value => this.handleChange(value && value.id, 'businessPartnerId')}
-                                />
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div className='col-sm-6'>
-
-                        <div className='form-group'>
-                            <label className='col-sm-4'>{i18n.getMessage('ServiceProfileOverview.docType.label')}</label>
-                            <div className='col-sm-8'>
-                                <Select
-                                    value={this.getDefaultLabel(params.docType, 'docType')}
-                                    onChange={item => this.handleChange(item, 'docType')}
-                                    options={
-                                        ['invoice', 'order', 'orderResponse', 'despatchAdvice']
-                                            .map(docType => this.getDefaultLabel(docType, 'docType'))
-                                    }
-                                />
-                            </div>
-                        </div>
-
-                        <div className='form-group'>
-                            <label className='col-sm-4'>{i18n.getMessage('ServiceProfileOverview.direction')}</label>
-                            <div className='col-sm-8'>
-                                <Select
-                                    value={this.getDefaultLabel(params.direction, 'direction')}
-                                    onChange={item => this.handleChange(item && item.value, 'direction')}
-                                    options={
-                                        ['sending', 'receiving']
-                                            .map(direction => this.getDefaultLabel(direction, 'direction'))
-                                    }
-                                />
-                            </div>
-                        </div>
-
                     </div>
                 </div>
                 <div className='form-submit text-right'>

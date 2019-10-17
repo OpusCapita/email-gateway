@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import 'react-table/react-table.css';
 import ReactTable from 'react-table';
 import { Components } from '@opuscapita/service-base-ui';
-import BusinessPartner from '../BusinessPartner';
-import Client from '../Client';
 
 
 class ServiceProfileList extends Components.ContextComponent {
@@ -26,23 +24,10 @@ class ServiceProfileList extends Components.ContextComponent {
         const { i18n, router } = this.context;
         return [{
             accessor: 'name',
-            Header: i18n.getMessage('Common.name'),
+            Header: i18n.getMessage('Common.name')
         }, {
-            id: 'clientId',
-            accessor: ({ clientId }) => <Client.Name id={clientId} />,
-            Header: i18n.getMessage('ServiceProfileOverview.client'),
-        }, {
-            id: 'businessPartnerId',
-            accessor: ({ businessPartnerId }) => <BusinessPartner.Name id={businessPartnerId} />,
-            Header: i18n.getMessage('ServiceProfileOverview.businessPartner'),
-        }, {
-            id: 'docType',
-            accessor: ({ docType }) => docType && i18n.getMessage(`ServiceProfileOverview.docType.${docType}`),
-            Header: i18n.getMessage('ServiceProfileOverview.docType.label'),
-        }, {
-            id: 'direction',
-            accessor: ({ direction }) => direction && i18n.getMessage(`ServiceProfileOverview.direction.${direction}`),
-            Header: i18n.getMessage('ServiceProfileOverview.direction'),
+            accessor: 'description',
+            Header: i18n.getMessage('Common.description')
         }, {
             id: 'actions',
             accessor: data => data,
@@ -53,7 +38,7 @@ class ServiceProfileList extends Components.ContextComponent {
                         className="btn btn-sm btn-default"
                         onClick={(e) => {
                             e.preventDefault();
-                            router.push(`/routing/service-profile/edit/${value.id}`);
+                            router.push(`/email-gateway/service-profile/edit/${value.id}`);
                         }}
                     >
                         {i18n.getMessage('ServiceProfileOverview.actions.open')}
@@ -76,8 +61,12 @@ class ServiceProfileList extends Components.ContextComponent {
         const { i18n } = this.context;
         const { serviceProfiles, loading } = this.props;
 
+        console.log(serviceProfiles);
+        
         return (<div className="row">
             <div className="col-xs-12">
+                
+                {serviceProfiles.length > 0 ? 
                 <ReactTable
                     data={serviceProfiles}
                     columns={this.getColumns()}
@@ -90,8 +79,8 @@ class ServiceProfileList extends Components.ContextComponent {
                     pageText={i18n.getMessage('ServiceProfileOverview.pagination.page')}
                     ofText={i18n.getMessage('ServiceProfileOverview.pagination.of')}
                     rowsText={i18n.getMessage('ServiceProfileOverview.pagination.rows')}
-                    className="-striped -highlight ocbn table"
-                />
+                    className="-striped -highlight ocbn table" 
+                /> : <p>Empty array</p>}
             </div>
         </div>)
     }
