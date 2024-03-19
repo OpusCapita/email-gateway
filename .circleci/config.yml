@@ -61,13 +61,3 @@ workflows:
   commit:
     jobs:
       - build
-  nightly:
-    triggers:
-      - schedule:
-          cron: "0 0 * * *"
-          filters:
-            branches:
-              only:
-                - develop
-    jobs:
-      - build_base
